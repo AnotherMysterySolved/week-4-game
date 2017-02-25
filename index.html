@@ -1,0 +1,131 @@
+<!-- Check out fontawesome for icons -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Crystal Game</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		
+	</head>
+	<body>
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="jumbotron">
+			  			<h1>Crystal Collector!</h1>
+			  			<p><a class="btn btn-primary btn-lg" role="button" id="start-button">Start Game!</a></p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-8">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<p>
+									You will be given a random number at the start of each game.
+									<br>
+									<br>
+									There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. The value of each crystal is hidden from you until you click on it.
+									<br>
+									<br>
+									You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. Each time the game starts, the values of each crystal will change. Good Luck!
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="panel-header-color">
+							<h3 class="panel-title" id="section-header-right">Wins</h3>
+						</div>
+						<div class="panel-body">
+							<p id="wins"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="panel-header-color">
+							<h3 class="panel-title" id="section-header-right">Losses</h3>
+						</div>
+						<div class="panel-body">
+							<p id="losses"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-md-12">
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="panel-header-color">
+							<h3 class="panel-title" id="section-header-right">Random Number</h3>
+						</div>
+						<div class="panel-body">
+							<p id="targetRandomNumber"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="panel-header-color">
+							<h3 class="panel-title" id="section-header-right">Total Score</h3>
+						</div>
+						<div class="panel-body">
+							<p id="totalScore"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-3">
+									<input type="image" src="assets/images/yellow-gem.png" id="yellow-gem" />
+								</div>
+								<div class="col-md-3">
+									<input type="image" src="assets/images/blue-gem.png" id="blue-gem" />
+								</div>						
+								<div class="col-md-3">
+									<input type="image" src="assets/images/green-gem.png" id="green-gem" />
+								</div>								
+								<div class="col-md-3">
+									<input type="image" src="assets/images/red-gem.png" id="red-gem" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script
+	src="http://code.jquery.com/jquery-3.1.1.js"
+	integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="./assets//javascript/game.js"></script>
+</html>
+<!--
+The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
+Bacon ipsum dolor amet shankle pastrami alcatra, ball tip drumstick pork andouille cupim landjaeger porchetta swine shank ham hock tongue venison. Shankle leberkas short loin, sausage kevin biltong pork loin brisket pastrami. Spare ribs pork strip steak t-bone kevin pork belly capicola, prosciutto short ribs venison jerky meatball. Turkey filet mignon alcatra corned beef salami, pastrami cow. Turducken bresaola boudin, pork belly strip steak pig kevin tongue shoulder corned beef ham prosciutto jerky fatback. Tenderloin tongue meatloaf turducken pork belly brisket, pastrami rump fatback venison andouille pork loin shankle turkey tail. Corned beef tenderloin salami, ball tip beef ribs ribeye ground round filet mignon.
+Andouille tail chuck, shankle biltong boudin tenderloin turducken ham kevin. Hamburger pancetta andouille pork kevin shankle rump porchetta spare ribs salami venison swine. Meatball pork loin tongue biltong kevin strip steak turkey ham hock beef venison prosciutto alcatra turducken. Meatloaf frankfurter spare ribs, pancetta strip steak chicken picanha. Tri-tip brisket flank, tongue bacon doner picanha corned beef strip steak capicola swine pork chop cow.
+-->
