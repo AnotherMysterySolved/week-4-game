@@ -1,8 +1,8 @@
 
 //GLOBAL--------------------------------------------------
 
-var wins;
-var losses;
+var wins = 0;
+var losses = 0;
 var totalUserScore = 0;
 var randomTarget = randomIntFromInterval(19,120);
 
@@ -17,10 +17,10 @@ var blueGemBtn   = $('#blue-gem');
 var greenGemBtn  = $('#green-gem');
 var redGemBtn    = $('#red-gem');
 
-var totalScoreDiv = $('#total-score');
+var totalScoreDiv   = $('#total-score');
 var randomNumberDiv = $('#target-random-number');
-var winsDiv;
-var lossesDiv;
+var winsDiv   = $('#wins');
+var lossesDiv = $('#losses');
 
 function randomIntFromInterval(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -73,15 +73,16 @@ function equalCheck() {
 	totalScoreDiv.html(totalUserScore);
 
 	if (totalUserScore == randomTarget){
-		// you win!
-		// wins ++
-		// alert "you win" or whatevs
+		alert("Congratulations, your 2nd grade teacher would be proud!");
+		wins += 1;
+		winsDiv.html(wins);
 		reset();
 	} else if(totalUserScore > randomTarget) {
-		// Fuck you!
-		// losses ++
+		alert("Sucks to suck. Try Again");
+		losses += 1;
+		lossesDiv.html(losses);
 		reset();
 	}
 
-	// update view with new wins and losses
+
 }
