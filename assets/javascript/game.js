@@ -1,51 +1,87 @@
-console.log("Hello World")
-//--------------------------------------------------------
-//GLOBAL--------------------------------------------------
-//--------------------------------------------------------
-var crystal = ["yellowGem", "blueGem", "greenGem", "redGem"]
 
+//GLOBAL--------------------------------------------------
+
+var wins;
+var losses;
+var totalUserScore = 0;
+var randomTarget = randomIntFromInterval(19,120);
+
+var yellowGemNum = randomIntFromInterval(1,12);
+var blueGemNum   = randomIntFromInterval(1,12);
+var greenGemNum  = randomIntFromInterval(1,12);
+var redGemNum    = randomIntFromInterval(1,12);
+
+var StartBtn     = $('#start-button');
+var yellowGemBtn = $('#yellow-gem');
+var blueGemBtn   = $('#blue-gem');
+var greenGemBtn  = $('#green-gem');
+var redGemBtn    = $('#red-gem');
+
+var totalScoreDiv = $('#total-score');
+var randomNumberDiv = $('#target-random-number');
+var winsDiv;
+var lossesDiv;
 
 function randomIntFromInterval(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-function crystalValue(){
-	for(var i = 0; i < crystal.length; i++){
-	crystal[i] = randomIntFromInterval(1, 12);
-	console.log(crystal);
-	};
-}
+function reset(){
+	randomTarget = randomIntFromInterval(19,120);
+    randomNumberDiv.html(randomTarget);
+    totalScoreDiv.html(0);
+    totalUserScore = 0;
+    yellowGemNum = randomIntFromInterval(1,12);
+	blueGemNum   = randomIntFromInterval(1,12);
+	greenGemNum  = randomIntFromInterval(1,12);
+	redGemNum    = randomIntFromInterval(1,12);
+}   
 
-//--------------------------------------------------------
 //The Game------------------------------------------------
-//--------------------------------------------------------
+
+StartBtn.on("click", function() {
+	reset()
+
+ });
 
 
-$("#start-button").on("click", function() {
-    var random = randomIntFromInterval(19,120);
-    $("#targetRandomNumber").html(random);
-    $("#totalScore").html(0);
+yellowGemBtn.click(function(){
+	totalUserScore += yellowGemNum;
+	console.log("Yellow is " + yellowGemNum);
+	equalCheck();
+});
 
+blueGemBtn.click(function() {
+	totalUserScore += blueGemNum;
+	console.log("Blue is " + blueGemNum);
+	equalCheck();
+});
 
-   });
+greenGemBtn.click(function() {
+	totalUserScore += greenGemNum;
+	console.log("Green is " + greenGemNum);
+	equalCheck();
+});
 
- //  	$("#yellow-gem").on("click", function() {
- //    var random = randomIntFromInterval(1,12);
- //    console.log(random)
+redGemBtn.click(function() {
+	totalUserScore = totalUserScore + redGemNum;
+	console.log("Red is " + redGemNum);
+	equalCheck();
+});
 
- // });
+function equalCheck() {
+	totalScoreDiv.html(totalUserScore);
 
-crystalValue()
+	if (totalUserScore == randomTarget){
+		// you win!
+		// wins ++
+		// alert "you win" or whatevs
+		reset();
+	} else if(totalUserScore > randomTarget) {
+		// Fuck you!
+		// losses ++
+		reset();
+	}
 
-
-
-
-
-
-
-
-
-// function randomIntFromInterval(min,max)
-// {
-//     return Math.floor(Math.random()*(max-min+1)+min);
-// }
+	// update view with new wins and losses
+}
