@@ -29,6 +29,7 @@ function randomIntFromInterval(min,max){
 function reset(){
 	randomTarget = randomIntFromInterval(19,120);
     randomNumberDiv.html(randomTarget);
+    console.log(randomTarget);
     totalScoreDiv.html(0);
     totalUserScore = 0;
     yellowGemNum = randomIntFromInterval(1,12);
