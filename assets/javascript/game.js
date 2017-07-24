@@ -33,10 +33,10 @@ function reset(){
     totalScoreDiv.html(0);
     totalUserScore = 0;
     yellowGemNum = randomIntFromInterval(1,12);
-	blueGemNum   = randomIntFromInterval(1,12);
-	greenGemNum  = randomIntFromInterval(1,12);
-	redGemNum    = randomIntFromInterval(1,12);
-}   
+  	blueGemNum   = randomIntFromInterval(1,12);
+  	greenGemNum  = randomIntFromInterval(1,12);
+  	redGemNum    = randomIntFromInterval(1,12);
+}
 
 //The Game------------------------------------------------
 
